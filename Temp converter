@@ -1,0 +1,12 @@
+git remote add origin https://github.com/khisr420/Temp-Converter.git
+git push -u origin master
+
+from ipywidgets import interact, interactive, fixed
+from IPython.display import display
+def Fah_Cel(C, F):
+    Cel = round((32-F)/1.8)
+    Fah = round(1.8*C +32)
+    display(f'The Temp in Celcius is:{Cel}', f'The Temperature in Farnhite is :{Fah}')
+    return Cel,Fah
+w = interactive(Fah_Cel, C =15, F=15)
+display(w)
